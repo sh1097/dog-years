@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Age converter</title>
+
+	<style >
+		body{
+background-image: url('png-clipart-dog-human-behavior-mammal-cat-friendship-dog-love-child.png');
+background-repeat: no-repeat;
+background-size: cover;
+height: auto;
+width: 100%;
+		}
+
+
+
+		.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: black;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: grey;}
+
+.button:active {
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+	</style>
+</head>
+<body >
+  <div>
+
+  	<label for="inpuut" style="color :black; font-size: 35px;margin-top: 30px;padding-top: 40px;"> Enter The Human age: -></label>
+  	<input type="text" id="text1" style=" padding:35px; border:20px solid black;width:15%;margin-left: 840px;"/>
+
+  </div>
+  <div>
+  		<label for="output" style="color :black; font-size: 30px;margin-top: 30px;"> Show the Dog's Age: -></label>
+  	<input type="text" id="text2" style="text-align: center; padding:40px; border:20px solid black;width:15%;margin-left: 840px;"/>
+  </div>
+  <div>
+  	
+  	<button class="button" id="key" onclick="ageconverter()"> Convert</button>
+  </div>
+
+</body>
+<script >
+	function ageconverter()
+	{
+	var age=document.getElementById("text1").value;
+
+		const fixedvalue=21;
+		const value=2;
+		if ( age>21){
+			debugger;
+			cas=age-21;
+			b=cas/4;
+			store=b+value;
+			d=Math.floor(store);
+			result=(store-d)*12;
+			   document.getElementById("text2").value=( d + "years"+" "+ result + "month");
+		}
+		else{
+			S=age/10.5;
+			W=Math.floor(S);
+			T=Math.round((S-W)*12);
+			document.getElementById("text2").value=(W+"years"+T+"month")
+		}
+	}
+</script>
+</html>
